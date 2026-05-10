@@ -1,0 +1,100 @@
+/* Reset ringan */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+
+body {
+    background: #f5f7fb;
+    color: #222;
+    padding: 32px;
+}
+
+/* Judul */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0b57a4;
+    font-size: 28px;
+}
+
+/* Kontainer tabel */
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 18px;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(10,30,60,0.06);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Header tabel */
+table thead th,
+table tr:first-child th {
+    background: linear-gradient(180deg, #0b57a4, #0f67c0);
+    color: #fff;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Baris dan sel */
+table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #eef2f7;
+    font-size: 14px;
+    vertical-align: middle;
+    color: #333;
+}
+
+/* Baris bergantian */
+table tr:nth-child(even) td {
+    background: #fbfdff;
+}
+
+/* Aksi (link) */
+table a {
+    color: #0b57a4;
+    text-decoration: none;
+    margin-right: 8px;
+    font-weight: 600;
+}
+table a:hover { text-decoration: underline; }
+
+/* Tombol input data baru */
+.actions {
+    text-align: center;
+    margin-top: 8px;
+}
+.actions a button {
+    background: #0b57a4;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(11,87,164,0.18);
+    font-weight: 600;
+}
+.actions a button:hover {
+    background: #0e66bf;
+}
+
+/* Responsif */
+@media (max-width: 640px) {
+    table, thead, tbody, th, td, tr { display: block; }
+    thead { display: none; }
+    table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #eef2f7;
+    }
+    table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: #556;
+        margin-right: 12px;
+    }
+    .actions a button { width: 100%; }
+}
